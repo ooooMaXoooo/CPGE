@@ -28,7 +28,7 @@
  * 
  * @result un booléen, vrai si la proposition du joueur est correcte
  */
-bool verif_proposition(int* ptr_prop, int* ptr_nbMystere);
+bool verif_proposition(int prop, int nbMystere);
 
 
 
@@ -36,13 +36,13 @@ bool verif_proposition(int* ptr_prop, int* ptr_nbMystere);
 
 
 /******************** CORPS DES FOCNTIONS ********************/
-bool verif_proposition(int* ptr_prop, int* ptr_nbMystere)
+bool verif_proposition(int prop, int nbMystere)
 {
-    if(*ptr_prop < *ptr_nbMystere)
+    if(ptr_prop < ptr_nbMystere)
     {
         printf("\n\tLe nombre est plus grand\n\n");
     }
-    else if (*ptr_prop > *ptr_nbMystere)
+    else if (ptr_prop > ptr_nbMystere)
     {
         printf("\n\tLe nombre est moins grand\n\n");
     }
