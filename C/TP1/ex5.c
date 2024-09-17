@@ -38,11 +38,11 @@ bool verif_proposition(int prop, int nbMystere);
 /******************** CORPS DES FOCNTIONS ********************/
 bool verif_proposition(int prop, int nbMystere)
 {
-    if(ptr_prop < ptr_nbMystere)
+    if(prop < nbMystere)
     {
         printf("\n\tLe nombre est plus grand\n\n");
     }
-    else if (ptr_prop > ptr_nbMystere)
+    else if (prop > nbMystere)
     {
         printf("\n\tLe nombre est moins grand\n\n");
     }
