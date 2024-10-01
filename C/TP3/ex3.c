@@ -76,11 +76,11 @@ void heureDepart(int depart[], int arrivee[], int arret)
 
     // on ajoute la duree aux minutes
     depart[1] = arrivee[1]+60 - duree;
-    depart[0] = arrivee[0];
+    depart[0] = arrivee[0] - 1;
 
     // mettre l'heure d'arrivée sous le bon format
-    arrivee[0] = (arrivee[1] / 60 + arrivee[0]) % 24;          // on ajoute les minutes en trop et on met l'heure entre 0 et 23
-    arrivee[1] %= 60;      
+    depart[0] = (depart[1] / 60 + depart[0]) % 24;          // on ajoute les minutes en trop et on met l'heure entre 0 et 23
+    depart[1] %= 60;      
 }
 
 
@@ -116,8 +116,16 @@ void test_heureArrivee()
 int main(int argc, char* argv[])
 {
     test_heureArrivee();
-
-    printf("%d\n", -10%60);
+    
+    int depart[2] = {-1, -1};
+    int arrivee[2] = {-1, 36};
+    
+    afficheTab(depart, 2);
+    
+    printf("\n");
+    heureDepart(depart, arrivee, 4);
+    
+    afficheTab(depart, 2);
 
     return 0;
 }
