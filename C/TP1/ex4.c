@@ -1,3 +1,5 @@
+// programme pour afficher 3 nombres donnés en entrée, dans l'ordre croissant.
+
 #include <stdio.h>
 
 int main(int argc, char* argv[])

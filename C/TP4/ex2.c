@@ -16,7 +16,7 @@ void afficheMatrice(int matrice[3][3])
     }
 }
 
-
+// modifie M tq M devient la matrice identité de taille 3x3
 void diag(int M[3][3])
 {
     for(int i = 0; i < 3; i++)
@@ -28,6 +28,7 @@ void diag(int M[3][3])
     }
 }
 
+// remplit une matrice 3x3 par des 1
 void ones(int M[3][3])
 {
     for(int i = 0; i < 3; i++)
@@ -39,6 +40,7 @@ void ones(int M[3][3])
     }
 }
 
+// remplit une matrice 3x3 par des 0
 void zeros(int M[3][3])
 {
     for(int i = 0; i < 3; i++)
@@ -64,8 +66,10 @@ void remplitMatrice(int matrice[2][3])
     }
 }
 
+//calcul le produit matriciel de A par B et le stock dans C
 void produitMatrice(int A[3][3], int B[3][3], int C[3][3])
 {
+    // on met C à 0 pour ajouter nos termes sans récuperer ce qu'il y avait dans la mémoire auparavant
     zeros(C);
     for (int i = 0; i < 3; i++)
     {

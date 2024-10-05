@@ -79,7 +79,7 @@ int main(int argc, char* argv[])
 
 
 
-    srand(time(NULL));                     // rajoute de l'aléatoire
+    srand(time(NULL));                     // initialise la graine grâce à l'heure, la graine change donc à chaque execution du programme
 
 
 

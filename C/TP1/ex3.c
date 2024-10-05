@@ -1,15 +1,16 @@
 #include <stdio.h>
 #include <assert.h>
 
+// retourne la somme des inverses des entiers de 1 à nb avec un for*
+// retourne 0 si nb = 0
 double somme_for(unsigned int nb)
 {
-    assert(nb != 0);
     double res = 0;
-    for(int i = 1; i < nb+1; i++)
+    // on utlise une boucle avec la décrémentation pour éviter "l'absorption" des petites valeurs
+    for(int i = nb; i > 0; i--)
     {
         res += 1/(double)i;
     }
-
     return res;
 }
 
